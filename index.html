@@ -65,7 +65,23 @@
 
       <!-- Intake form (do not move per SOW) -->
       <div class="hero__form" id="renewal-review">
-        <form class="review-card" id="renewalForm" novalidate>
+        <!-- Zoho Web-to-Lead: posts to Zoho (creates a Lead) then redirects to the affiliate returnURL -->
+        <form class="review-card" id="renewalForm"
+              action="https://crm.zoho.com/crm/WebToLeadForm"
+              name="WebToLeads1134491000115841001"
+              method="POST" accept-charset="UTF-8">
+
+          <!-- Zoho required hidden fields — do not remove -->
+          <input type="hidden" name="xnQsjsdp" value="8ccbe35531396c51ab46150e703aa44365abe0ed0d21b9484df2bd5ba11d6d1e" />
+          <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+          <input type="hidden" name="xmIwtLD" value="c759f69c6d620d22f45589b5fcee9e190592d0accb6e0a7204659278252469b02ef230424f8a33adc305b26284db1758" />
+          <input type="hidden" name="actionType" value="TGVhZHM=" />
+          <input type="hidden" name="returnURL" value="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&amp;utm_source=seo-renewal&amp;utm_campaign=affiliate" />
+          <!-- anti-spam honeypot (leave empty/hidden) -->
+          <input type="text" name="aG9uZXlwb3Q" tabindex="-1" autocomplete="off" value="" aria-hidden="true" style="display:none !important;" />
+          <!-- mandatory Last Name, auto-filled from the submitted website by script.js -->
+          <input type="hidden" id="Last_Name" name="Last Name" value="" />
+
           <div class="review-card__header">
             <h2 class="review-card__title">Start your free SEO renewal review</h2>
             <p class="review-card__sub">Enter your website and we'll send back a prioritized renewal report.</p>
@@ -73,22 +89,17 @@
 
           <label class="field">
             <span class="field__label">Website address</span>
-            <input type="url" name="website" inputmode="url" placeholder="yourcompany.com" required />
+            <input type="url" id="Website" name="Website" inputmode="url" placeholder="yourcompany.com" maxlength="255" required />
           </label>
 
           <label class="field">
             <span class="field__label">Work email</span>
-            <input type="email" name="email" placeholder="you@yourcompany.com" required />
+            <input type="email" ftype="email" id="Email" name="Email" placeholder="you@yourcompany.com" maxlength="100" required />
           </label>
 
           <button type="submit" class="btn btn--primary btn--block">Get my free renewal review</button>
 
           <p class="review-card__fineprint">No obligation. We don't sell your data. One report, no spam.</p>
-
-          <div class="review-card__success" id="formSuccess" hidden>
-            <strong>Got it — taking you to your free renewal review…</strong>
-            If you're not redirected, <a id="formFallback" href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored noopener">click here to continue</a>.
-          </div>
         </form>
 
         <ul class="trust-badges" aria-label="Assurances">

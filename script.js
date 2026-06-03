@@ -1,7 +1,8 @@
 // SEO Renewal — light front-end behavior
 
 // Affiliate offer (Stan Ventures — managed SEO services).
-// All conversions route here. Change in ONE place if the tracking link updates.
+// Standalone links route here. The lead form posts to Zoho first, and Zoho
+// then redirects to this same URL via its returnURL field (see index.html).
 var AFFILIATE_URL =
   "https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate";
 
@@ -10,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Every hyperlink on the page routes to the affiliate offer.
-  // This keeps AFFILIATE_URL above as the single source of truth — change it
-  // in one place and all links update. Also enforces rel="sponsored".
+  // Every standalone hyperlink routes to the affiliate offer (rel="sponsored").
+  // NOTE: this intentionally skips the lead form's submit button (a <button>),
+  // so the form still posts to Zoho.
   Array.prototype.forEach.call(
     document.querySelectorAll("a[href]"),
     function (a) {
@@ -21,31 +22,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  // Intake form: validate, confirm, then forward to the partner offer
+  // Lead form -> Zoho Web-to-Lead.
+  // Zoho's Leads module requires "Last Name", but we don't ask visitors for it.
+  // Derive it from the submitted website (fallback to email) so the lead is
+  // labelled and never rejected. We do NOT preventDefault — the native POST to
+  // Zoho proceeds, Zoho creates the lead, then redirects to the affiliate URL.
   var form = document.getElementById("renewalForm");
-  var success = document.getElementById("formSuccess");
-  var fallback = document.getElementById("formFallback");
-
   if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-
-      if (success) {
-        success.hidden = false;
-        success.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }
-      if (fallback) fallback.setAttribute("href", AFFILIATE_URL);
-      form.querySelector('button[type="submit"]').disabled = true;
-
-      // Forward to the Stan Ventures managed-SEO offer
-      window.setTimeout(function () {
-        window.location.href = AFFILIATE_URL;
-      }, 1200);
+    form.addEventListener("submit", function () {
+      var website = (document.getElementById("Website") || {}).value || "";
+      var email = (document.getElementById("Email") || {}).value || "";
+      var label = (website.trim() || email.trim() || "Website Lead")
+        .replace(/^https?:\/\//i, "")
+        .replace(/\/+$/, "");
+      var lastName = document.getElementById("Last_Name");
+      if (lastName) lastName.value = label.slice(0, 80);
+      // allow native submit to Zoho
     });
   }
 });
