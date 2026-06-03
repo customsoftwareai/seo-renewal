@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility Statement — SEO Renewal</title>
+  <meta name="description" content="SEO Renewal's accessibility statement: our commitment to WCAG 2.2 Level AA, the assistive options available, known limitations, and how to get help." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="a11y.css" />
+  <style>
+    .doc { max-width: 820px; margin: 0 auto; padding: 56px 24px 72px; }
+    .doc h1 { font-size: 34px; color: var(--navy); letter-spacing: -0.02em; margin: 0 0 8px; }
+    .doc .updated { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+    .doc h2 { font-size: 22px; color: var(--navy); margin: 34px 0 10px; }
+    .doc p, .doc li { color: var(--ink); font-size: 16.5px; }
+    .doc ul { padding-left: 22px; }
+    .doc li { margin: 6px 0; }
+    .doc a { color: var(--navy-600); }
+    .doc .back { display: inline-block; margin-bottom: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="SEO Renewal home" data-keep-href="true">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 12a9 9 0 1 1-2.64-6.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M21 4v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand__text">SEO<span class="brand__accent">Renewal</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary" id="primary-nav">
+        <a href="index.html" data-keep-href="true">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="doc">
+      <a class="back" href="index.html" data-keep-href="true">← Back to home</a>
+      <h1>Accessibility Statement</h1>
+      <p class="updated">Last updated: <span id="updated"></span></p>
+
+      <p>SEO Renewal is committed to making <strong>seorenewal.com</strong> usable by as many
+      people as possible, including those who rely on assistive technologies. We aim to meet the
+      <strong>Web Content Accessibility Guidelines (WCAG) 2.2, Level AA</strong> across our core
+      pages.</p>
+
+      <h2>Assistive options on this site</h2>
+      <p>Every page includes an <strong>“Accessibility options”</strong> button (bottom-right on
+      desktop, bottom-center on mobile). It is fully keyboard operable and opens a panel where you
+      can:</p>
+      <ul>
+        <li>Increase or decrease text size (110%–200%) and adjust line spacing.</li>
+        <li>Switch to High Contrast or Dark themes, or return to the light default.</li>
+        <li>Always underline links, or highlight links, for color-independent reading.</li>
+        <li>Switch to a dyslexia-friendly font (Atkinson Hyperlegible).</li>
+        <li>Turn on a movable reading guide (use the mouse or Up/Down arrow keys).</li>
+        <li>Enable a big cursor and a high-contrast focus ring.</li>
+        <li>Reduce motion (also honors your operating system’s “reduce motion” setting).</li>
+      </ul>
+      <p>Your choices are saved on your own device only (in local storage). We do not use cookies
+      or any tracking to store these settings.</p>
+
+      <h2>Built-in accessibility</h2>
+      <ul>
+        <li>“Skip to main content / navigation / footer” links appear when you start tabbing.</li>
+        <li>Semantic landmarks (header, navigation, main, footer) and a single, descriptive H1 per page.</li>
+        <li>Visible keyboard focus indicators on all interactive elements.</li>
+        <li>The accessibility menu is a focus-trapped dialog that closes with <kbd>Esc</kbd> and returns focus to its button.</li>
+      </ul>
+
+      <h2>Important note</h2>
+      <p>An accessibility menu and overlay aid access but do <em>not</em>, on their own, make a
+      website fully compliant. Our accessibility work also includes underlying WCAG 2.2 AA fixes
+      (keyboard support, focus visibility, color contrast, labels, headings, and reflow).</p>
+
+      <h2>Known limitations</h2>
+      <ul>
+        <li>When you click through to our partner (Stan Ventures) to complete a managed-SEO
+        request, that third-party site is outside our control and is governed by its own
+        accessibility practices.</li>
+        <li>Video captioning/transcription and remediation of legacy PDFs are not part of the
+        current scope.</li>
+      </ul>
+
+      <h2>Feedback &amp; contact</h2>
+      <p>If you encounter an accessibility barrier on this site, please let us know and we’ll work
+      to fix it. Contact us at
+      <a href="mailto:support@seorenewal.com" data-keep-href="true">support@seorenewal.com</a>.
+      We aim to respond within five business days.</p>
+
+      <h2>Measures &amp; assessment</h2>
+      <p>This site is tested with automated tooling (axe-core) and manual keyboard and
+      screen-reader checks. We conduct a quarterly mini-audit and address issues on an ongoing
+      basis.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container site-footer__legal" style="border-top:0;">
+      <span>&copy; <span id="year"></span> SEO Renewal. All rights reserved.</span>
+      <span class="site-footer__legal-links">
+        <a href="index.html" data-keep-href="true">Home</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("updated").textContent =
+      new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  </script>
+  <script src="a11y.js"></script>
+</body>
+</html>

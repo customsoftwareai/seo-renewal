@@ -1,0 +1,313 @@
+/* ===========================================================
+   SEO Renewal — Accessibility toolkit
+   Token classes applied to <html> (data attrs / classes) by a11y.js.
+   Plus skip links, focus rings, reading guide, and the menu UI.
+   =========================================================== */
+
+/* ---------- Skip links (visible on focus, first tabbable) ---------- */
+.a11y-skip-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+.a11y-skip-links a {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #0a2540;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 0 0 8px 0;
+  font: 600 15px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  text-decoration: none;
+}
+.a11y-skip-links a:focus {
+  left: 0;
+  outline: 3px solid #f2682b;
+  outline-offset: 2px;
+}
+
+/* ===========================================================
+   TEXT SIZE TOKENS  (scale base font on <html>)
+   =========================================================== */
+html.a11y-text-110 { font-size: 110%; }
+html.a11y-text-125 { font-size: 125%; }
+html.a11y-text-150 { font-size: 150%; }
+html.a11y-text-175 { font-size: 175%; }
+html.a11y-text-200 { font-size: 200%; }
+
+/* ===========================================================
+   LINE SPACING TOKENS
+   =========================================================== */
+html.a11y-line-120 body { line-height: 1.8 !important; }
+html.a11y-line-140 body { line-height: 2.1 !important; }
+html.a11y-line-120 p,
+html.a11y-line-120 li,
+html.a11y-line-120 label { line-height: 1.8 !important; }
+html.a11y-line-140 p,
+html.a11y-line-140 li,
+html.a11y-line-140 label { line-height: 2.1 !important; }
+
+/* ===========================================================
+   CONTRAST THEMES
+   =========================================================== */
+/* High contrast — WCAG AAA-leaning black/white/yellow */
+html.a11y-contrast-high body { background: #000 !important; color: #fff !important; }
+html.a11y-contrast-high .utility-bar,
+html.a11y-contrast-high .site-header,
+html.a11y-contrast-high .hero,
+html.a11y-contrast-high .section,
+html.a11y-contrast-high .section--alt,
+html.a11y-contrast-high .credstrip,
+html.a11y-contrast-high .statband,
+html.a11y-contrast-high .finalcta,
+html.a11y-contrast-high .site-footer,
+html.a11y-contrast-high .review-card,
+html.a11y-contrast-high .step,
+html.a11y-contrast-high .card,
+html.a11y-contrast-high .faq,
+html.a11y-contrast-high .whatyouget__panel {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+html.a11y-contrast-high h1,
+html.a11y-contrast-high h2,
+html.a11y-contrast-high h3,
+html.a11y-contrast-high p,
+html.a11y-contrast-high span,
+html.a11y-contrast-high li,
+html.a11y-contrast-high label,
+html.a11y-contrast-high .hero__headline,
+html.a11y-contrast-high .section__title { color: #fff !important; }
+html.a11y-contrast-high a { color: #ffff00 !important; }
+html.a11y-contrast-high .btn--primary {
+  background: #ffff00 !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+  box-shadow: none !important;
+}
+html.a11y-contrast-high .field input {
+  background: #000 !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+/* Dark mode */
+html.a11y-dark body { background: #0e1621 !important; color: #e6edf3 !important; }
+html.a11y-dark .site-header,
+html.a11y-dark .credstrip { background: #0e1621 !important; border-color: #243140 !important; }
+html.a11y-dark .hero { background: #0e1621 !important; }
+html.a11y-dark .section--alt,
+html.a11y-dark .review-card,
+html.a11y-dark .step,
+html.a11y-dark .card,
+html.a11y-dark .faq { background: #16212e !important; border-color: #243140 !important; }
+html.a11y-dark h1, html.a11y-dark h2, html.a11y-dark h3,
+html.a11y-dark .hero__headline, html.a11y-dark .section__title,
+html.a11y-dark .review-card__title,
+html.a11y-dark .step__title, html.a11y-dark .card__title { color: #f3f7fb !important; }
+html.a11y-dark p, html.a11y-dark li, html.a11y-dark label, html.a11y-dark .nav a { color: #c3ced9 !important; }
+html.a11y-dark .field input { background: #0e1621 !important; color: #e6edf3 !important; border-color: #2c3b4c !important; }
+
+/* ===========================================================
+   LINKS — color independence
+   =========================================================== */
+html.a11y-underline-links a:not(.btn) { text-decoration: underline !important; text-underline-offset: 2px; }
+html.a11y-highlight-links a:not(.btn) {
+  background: #fff3a0 !important;
+  color: #1a2533 !important;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* ===========================================================
+   DYSLEXIA-FRIENDLY FONT (Atkinson Hyperlegible, loaded by a11y.js)
+   =========================================================== */
+html.a11y-dyslexia body,
+html.a11y-dyslexia p,
+html.a11y-dyslexia li,
+html.a11y-dyslexia label,
+html.a11y-dyslexia input,
+html.a11y-dyslexia button,
+html.a11y-dyslexia h1,
+html.a11y-dyslexia h2,
+html.a11y-dyslexia h3 {
+  font-family: "Atkinson Hyperlegible", Verdana, Tahoma, sans-serif !important;
+  letter-spacing: 0.01em;
+}
+
+/* ===========================================================
+   BIG CURSOR
+   =========================================================== */
+html.a11y-big-cursor,
+html.a11y-big-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'%3E%3Cpath d='M4 2 L4 30 L11 23 L15 31 L19 29 L15 21 L24 21 Z' fill='black' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E") 4 2, auto !important;
+}
+
+/* ===========================================================
+   ALWAYS-VISIBLE HIGH-CONTRAST FOCUS RING
+   (base focus-visible is always on; this strengthens it)
+   =========================================================== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #1f6feb;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+html.a11y-focus-ring a:focus,
+html.a11y-focus-ring button:focus,
+html.a11y-focus-ring input:focus,
+html.a11y-focus-ring select:focus,
+html.a11y-focus-ring textarea:focus,
+html.a11y-focus-ring summary:focus,
+html.a11y-focus-ring [tabindex]:focus {
+  outline: 4px solid #ff7a00 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 2px #000 !important;
+}
+
+/* ===========================================================
+   REDUCE MOTION
+   =========================================================== */
+html.a11y-reduce-motion *,
+html.a11y-reduce-motion *::before,
+html.a11y-reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:not(.a11y-motion-allow) *,
+  html:not(.a11y-motion-allow) *::before,
+  html:not(.a11y-motion-allow) *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===========================================================
+   READING GUIDE (horizontal ruler overlay)
+   =========================================================== */
+.a11y-reading-guide {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: rgba(10, 37, 64, 0.18);
+  border-top: 2px solid rgba(10, 37, 64, 0.85);
+  border-bottom: 2px solid rgba(10, 37, 64, 0.85);
+  pointer-events: none;
+  z-index: 1900;
+  display: none;
+}
+html.a11y-reading-guide-on .a11y-reading-guide { display: block; }
+
+/* ===========================================================
+   ACCESSIBILITY LAUNCHER BUTTON + PANEL
+   =========================================================== */
+.a11y-launcher {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 1950;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #0a2540;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.a11y-launcher:hover { background: #11355f; }
+.a11y-launcher svg { width: 30px; height: 30px; }
+
+.a11y-panel {
+  position: fixed;
+  bottom: 90px;
+  right: 22px;
+  z-index: 1960;
+  width: 340px;
+  max-width: calc(100vw - 24px);
+  max-height: 78vh;
+  overflow-y: auto;
+  background: #fff;
+  color: #1a2533;
+  border: 1px solid #d6dee7;
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  padding: 18px 18px 22px;
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+.a11y-panel[hidden] { display: none; }
+.a11y-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.a11y-panel__title { margin: 0; font-size: 17px; font-weight: 800; color: #0a2540; }
+.a11y-panel__close {
+  background: transparent;
+  border: 1px solid #d6dee7;
+  border-radius: 8px;
+  width: 32px; height: 32px;
+  font-size: 18px; line-height: 1;
+  cursor: pointer;
+  color: #1a2533;
+}
+.a11y-group { border-top: 1px solid #eef2f6; padding: 12px 0 4px; }
+.a11y-group:first-of-type { border-top: 0; }
+.a11y-group__label {
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: #5b6b7e; margin: 0 0 8px;
+}
+.a11y-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 8px 0; }
+.a11y-row span { flex: 1; }
+.a11y-btns { display: inline-flex; gap: 6px; }
+.a11y-btn {
+  border: 1px solid #c0c9d4;
+  background: #f5f8fb;
+  color: #1a2533;
+  border-radius: 8px;
+  padding: 6px 11px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 36px;
+}
+.a11y-btn[aria-pressed="true"] { background: #f2682b; border-color: #f2682b; color: #fff; }
+.a11y-btn:hover { border-color: #0a2540; }
+.a11y-reset {
+  margin-top: 14px;
+  width: 100%;
+  border: 1px solid #c0c9d4;
+  background: #fff;
+  color: #0a2540;
+  border-radius: 8px;
+  padding: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.a11y-note { margin: 12px 0 0; font-size: 12px; color: #5b6b7e; }
+
+/* Mobile: bottom-center launcher */
+@media (max-width: 600px) {
+  .a11y-launcher { right: 50%; transform: translateX(50%); bottom: 16px; }
+  .a11y-panel { right: 50%; transform: translateX(50%); bottom: 80px; }
+}
+
+/* When motion override is on, ignore the prefers-reduced-motion suppression */
+html.a11y-motion-allow * { animation-play-state: running !important; }

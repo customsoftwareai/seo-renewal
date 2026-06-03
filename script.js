@@ -17,6 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
   Array.prototype.forEach.call(
     document.querySelectorAll("a[href]"),
     function (a) {
+      var href = a.getAttribute("href") || "";
+      // Leave accessibility/skip/in-page links alone so they keep working.
+      if (a.hasAttribute("data-keep-href")) return;
+      if (href.charAt(0) === "#") return;                 // skip links, in-page anchors
+      if (/accessibility\.html(\?|#|$)/i.test(href)) return; // statement page
+      if (a.closest(".a11y-skip-links, .a11y-panel")) return; // a11y UI
       a.setAttribute("href", AFFILIATE_URL);
       a.setAttribute("rel", "sponsored");
     }
