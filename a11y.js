@@ -111,6 +111,10 @@
   var launcher, panel, lastFocused;
 
   function buildUI() {
+    // Container is a complementary landmark so all content stays inside a region.
+    var region = document.createElement("aside");
+    region.setAttribute("aria-label", "Accessibility tools");
+
     launcher = document.createElement("button");
     launcher.type = "button";
     launcher.className = "a11y-launcher";
@@ -122,7 +126,7 @@
       '<circle cx="12" cy="4" r="2"/>' +
       '<path d="M21 8.5c0 .6-.4 1-1 1.1l-4 .6v3.3l1.7 5.6c.2.6-.2 1.2-.8 1.4-.6.2-1.2-.2-1.4-.8L13.8 15h-.6l-1.5 4.7c-.2.6-.8 1-1.4.8-.6-.2-1-.8-.8-1.4L11 13.5v-3.3l-4-.6C6.4 9.5 6 9 6 8.5c0-.6.5-1.1 1.1-1L12 8l4.9-.5c.6-.1 1.1.4 1.1 1z"/>' +
       '</svg>';
-    document.body.appendChild(launcher);
+    region.appendChild(launcher);
 
     panel = document.createElement("div");
     panel.className = "a11y-panel";
@@ -131,7 +135,8 @@
     panel.setAttribute("aria-label", "Accessibility options");
     panel.hidden = true;
     panel.innerHTML = panelHTML();
-    document.body.appendChild(panel);
+    region.appendChild(panel);
+    document.body.appendChild(region);
 
     launcher.addEventListener("click", toggle);
     panel.addEventListener("click", onPanelClick);
