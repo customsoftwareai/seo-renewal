@@ -308,7 +308,7 @@ a:hover { color: var(--navy-700); }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-700);
+  color: #a8380a; /* AA-compliant deep orange on white and on --bg-alt */
 }
 .section__title {
   margin: 0 0 12px;
