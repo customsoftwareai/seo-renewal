@@ -3,294 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEO Renewal — Official SEO Review &amp; Renewal Service</title>
-  <meta name="description" content="SEO isn't a one-time setup. Get a free, no-obligation SEO renewal review and find out where your website is quietly losing rankings." />
+  <title>SEO Renewal — Find an SEO provider you'll actually trust</title>
+  <meta name="description" content="Unhappy with your SEO provider or up for renewal? SEO Renewal is a free, independent matching service that connects you with a vetted SEO specialist suited to your goals. No cost, no obligation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="a11y.css" />
 </head>
 <body>
 
-  <!-- Official utility bar -->
-  <div class="utility-bar" role="region" aria-label="Site announcements">
-    <div class="container utility-bar__inner">
-      <span class="utility-bar__item">Secure intake</span>
-      <span class="utility-bar__dot">•</span>
-      <span class="utility-bar__item">No obligation</span>
-      <span class="utility-bar__dot">•</span>
-      <span class="utility-bar__item">Reviews completed within 3 business days</span>
-    </div>
-  </div>
+  <!-- Hidden Zoho Web-to-Lead form (submitted into hidden iframe by wizard.js) -->
+  <iframe name="zoho_target" id="zoho_target" style="display:none" title="Zoho submission target"></iframe>
+  <form id="zohoLeadForm" action="https://crm.zoho.com/crm/WebToLeadForm"
+        target="zoho_target" method="POST" accept-charset="UTF-8" style="display:none" aria-hidden="true">
+    <input type="hidden" name="xnQsjsdp" value="8ccbe35531396c51ab46150e703aa44365abe0ed0d21b9484df2bd5ba11d6d1e" />
+    <input type="hidden" name="xmIwtLD" value="c759f69c6d620d22f45589b5fcee9e190592d0accb6e0a7204659278252469b02ef230424f8a33adc305b26284db1758" />
+    <input type="hidden" name="actionType" value="TGVhZHM=" />
+    <input type="hidden" name="returnURL" value="https://seorenewal.com/thanks.html" />
+    <input type="hidden" name="aG9uZXlwb3Q" value="" />
+    <input type="hidden" id="z_lastname" name="Last Name" value="" />
+    <input type="hidden" id="z_email" name="Email" value="" />
+    <input type="hidden" id="z_website" name="Website" value="" />
+    <input type="hidden" id="z_company" name="Company" value="" />
+    <input type="hidden" name="Lead Source" value="SEORenewal.com" />
+    <input type="hidden" id="z_description" name="Description" value="" />
+  </form>
 
   <!-- Header / Nav -->
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored" class="brand" aria-label="SEO Renewal home">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 12a9 9 0 1 1-2.64-6.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M21 4v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="SEO Renewal home">
         <span class="brand__text">SEO<span class="brand__accent">Renewal</span></span>
       </a>
-      <nav class="nav" aria-label="Primary" id="primary-nav">
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">How it works</a>
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">Why renew</a>
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">What you get</a>
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">FAQ</a>
+      <nav class="nav__links" aria-label="Primary" id="primary-nav">
+        <a href="#how">How it works</a>
+        <a href="#match">What we match you for</a>
+        <a href="#free">Why it's free</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored" class="btn btn--sm btn--primary nav__cta">Start renewal review</a>
+      <button type="button" class="btn btn--gold" data-open-wizard>Find my match</button>
     </div>
   </header>
 
   <main id="main">
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" id="top">
+    <div class="hero__glow" aria-hidden="true"></div>
     <div class="container hero__inner">
-      <div class="hero__copy">
-        <p class="hero__eyebrow">SEO Renewal Review</p>
+      <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Free service · Independent matching · US · CA · UK</p>
+      <h1 class="hero__title">Unhappy with your SEO provider? <span class="gold">Find one you'll actually trust.</span></h1>
+      <p class="hero__sub">Answer a few quick questions and we'll match you with a vetted SEO specialist suited to your goals — local, e-commerce, technical, backlinks, or full-service. It's completely free, and there's no pressure to commit.</p>
 
-        <!-- MAIN HEADLINE (do not change text/size per SOW) -->
-        <h1 class="hero__headline">Your Website's Rankings Don't Stay Put&nbsp;— They Decay.</h1>
-
-        <!-- SUBHEADLINE (exact SOW text — do not change) -->
-        <p class="hero__subheadline">If it hasn't been reviewed recently, your rankings are likely already slipping.</p>
-
-        <!-- CONCEPT BRIDGE LINE (exact SOW text, inserted below subheadline, above trust lines) -->
-        <p class="hero__bridge">SEO isn't a one-time setup — it needs to be reviewed and renewed over time.</p>
-
-        <!-- TRUST INDICATORS (below bridge line) -->
-        <p class="hero__trust">Not an SEO agency. No retainers, no long-term contracts.</p>
-        <p class="hero__trust">Most sites we review are leaking traffic they don't even know about.</p>
-      </div>
-
-      <!-- Intake form (do not move per SOW) -->
-      <div class="hero__form" id="renewal-review">
-        <!-- Zoho Web-to-Lead: posts to Zoho (creates a Lead) then redirects to the affiliate returnURL -->
-        <form class="review-card" id="renewalForm"
-              action="https://crm.zoho.com/crm/WebToLeadForm"
-              name="WebToLeads1134491000115841001"
-              method="POST" accept-charset="UTF-8">
-
-          <!-- Zoho required hidden fields — do not remove -->
-          <input type="hidden" name="xnQsjsdp" value="8ccbe35531396c51ab46150e703aa44365abe0ed0d21b9484df2bd5ba11d6d1e" />
-          <input type="hidden" name="zc_gad" id="zc_gad" value="" />
-          <input type="hidden" name="xmIwtLD" value="c759f69c6d620d22f45589b5fcee9e190592d0accb6e0a7204659278252469b02ef230424f8a33adc305b26284db1758" />
-          <input type="hidden" name="actionType" value="TGVhZHM=" />
-          <input type="hidden" name="returnURL" value="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&amp;utm_source=seo-renewal&amp;utm_campaign=affiliate" />
-          <!-- anti-spam honeypot (leave empty/hidden) -->
-          <input type="text" name="aG9uZXlwb3Q" tabindex="-1" autocomplete="off" value="" aria-hidden="true" style="display:none !important;" />
-          <!-- mandatory Last Name, auto-filled from the submitted website by script.js -->
-          <input type="hidden" id="Last_Name" name="Last Name" value="" />
-          <!-- Lead Source: every submission is tagged SEORenewal.com -->
-          <input type="hidden" id="LEADCF_LeadSource" name="Lead Source" value="SEORenewal.com" />
-
-          <div class="review-card__header">
-            <h2 class="review-card__title">Start your free SEO renewal review</h2>
-            <p class="review-card__sub">Enter your website and we'll send back a prioritized renewal report.</p>
-          </div>
-
-          <label class="field">
-            <span class="field__label">Website address</span>
-            <input type="url" id="Website" name="Website" inputmode="url" placeholder="yourcompany.com" maxlength="255" required />
-          </label>
-
-          <label class="field">
-            <span class="field__label">Work email</span>
-            <input type="email" ftype="email" id="Email" name="Email" placeholder="you@yourcompany.com" maxlength="100" required />
-          </label>
-
-          <button type="submit" class="btn btn--primary btn--block">Get my free renewal review</button>
-
-          <p class="review-card__fineprint">No obligation. We don't sell your data. One report, no spam.</p>
-        </form>
-
-        <ul class="trust-badges" aria-label="Assurances">
-          <li>Independent review</li>
-          <li>Plain-English report</li>
-          <li>No sales pressure</li>
-        </ul>
+      <!-- Embedded first question (the hook) -->
+      <div class="hook" aria-label="Start the matching questions">
+        <p class="hook__q">Are you currently working with an SEO provider?</p>
+        <div class="hook__opts" id="heroOptions">
+          <button type="button" class="hook__opt" data-hero="Yes, currently">Yes, currently</button>
+          <button type="button" class="hook__opt" data-hero="Yes, but the contract is ending soon">Yes, but the contract is ending soon</button>
+          <button type="button" class="hook__opt" data-hero="No — looking for my first one">No — looking for my first one</button>
+          <button type="button" class="hook__opt" data-hero="We do SEO in-house">We do SEO in-house</button>
+        </div>
+        <p class="hook__micro">Free service · No obligation · Takes under 60 seconds</p>
       </div>
     </div>
   </section>
 
-  <!-- Logo / credibility strip -->
-  <section class="credstrip">
-    <div class="container credstrip__inner">
-      <p class="credstrip__label">Trusted approach used to review sites across</p>
-      <ul class="credstrip__list">
-        <li>Local services</li>
-        <li>E-commerce</li>
-        <li>Professional firms</li>
-        <li>SaaS</li>
-        <li>Healthcare</li>
-      </ul>
+  <!-- The problem -->
+  <section class="section" id="problem">
+    <div class="container">
+      <p class="section__eyebrow">The problem</p>
+      <h2 class="section__title">Most people stay with the wrong SEO provider out of inertia.</h2>
+      <div class="cards3">
+        <div class="card">
+          <h3 class="card__title">Locked-in contracts</h3>
+          <p class="card__text">You're tied to a provider that no longer fits — and renewal is creeping up.</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">No results to show</h3>
+          <p class="card__text">Months in, rankings haven't moved and you're not sure the work is working.</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">No transparency</h3>
+          <p class="card__text">You can't tell what you're paying for, and reports raise more questions than answers.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- How it works -->
-  <section class="section" id="how-it-works">
+  <section class="section" id="how">
     <div class="container">
-      <p class="section__eyebrow">The process</p>
-      <h2 class="section__title">How an SEO renewal works</h2>
-      <p class="section__lead">A clear, three-step review — no jargon, no obligation, no retainer.</p>
-
+      <p class="section__eyebrow">How it works</p>
       <div class="steps">
         <div class="step">
-          <div class="step__num">1</div>
-          <h3 class="step__title">Submit your site</h3>
-          <p class="step__text">Tell us your website address. That's all we need to begin a full renewal review.</p>
+          <span class="step__n">01</span>
+          <h3 class="step__t">Tell us what's not working</h3>
+          <p class="step__d">A few quick questions about your goals, your current provider, and where you want to go.</p>
         </div>
         <div class="step">
-          <div class="step__num">2</div>
-          <h3 class="step__title">We run the renewal review</h3>
-          <p class="step__text">We assess what's decayed since your SEO was last set up — rankings, content, technical health, and competitors.</p>
+          <span class="step__n">02</span>
+          <h3 class="step__t">We match you to a specialist</h3>
+          <p class="step__d">Based on your answers, we point you to a vetted provider who actually fits — not a one-size-fits-all agency.</p>
         </div>
         <div class="step">
-          <div class="step__num">3</div>
-          <h3 class="step__title">You get a renewal report</h3>
-          <p class="step__text">A prioritized, plain-English report of exactly what to renew first — and what's costing you traffic right now.</p>
+          <span class="step__n">03</span>
+          <h3 class="step__t">You connect directly</h3>
+          <p class="step__d">Talk to your match on your terms. No pressure, no obligation, and never any cost to you.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why renew -->
-  <section class="section section--alt" id="why-renew">
+  <!-- What we match you for (specialty grid from category list) -->
+  <section class="section" id="match">
     <div class="container">
-      <p class="section__eyebrow">Why it matters</p>
-      <h2 class="section__title">SEO doesn't stand still — so it can't stay static</h2>
-      <p class="section__lead">The work that ranked your site a year ago is quietly being undone. Renewal catches it before it costs you customers.</p>
-
-      <div class="cards">
-        <div class="card">
-          <h3 class="card__title">Algorithms change</h3>
-          <p class="card__text">Search engines update constantly. Tactics that helped you yesterday can quietly hold you back today.</p>
-        </div>
-        <div class="card">
-          <h3 class="card__title">Competitors move</h3>
-          <p class="card__text">Rivals publish, build links, and improve their sites. Standing still means sliding backward.</p>
-        </div>
-        <div class="card">
-          <h3 class="card__title">Content decays</h3>
-          <p class="card__text">Pages that once ranked grow stale, outdated, and less relevant — and traffic drains away slowly.</p>
-        </div>
-        <div class="card">
-          <h3 class="card__title">Technical drift</h3>
-          <p class="card__text">Site changes, plugins, and redesigns introduce errors that search engines penalize over time.</p>
-        </div>
+      <p class="section__eyebrow">What we match you for</p>
+      <h2 class="section__title">Whatever you need, we'll route you to a specialist in it.</h2>
+      <p class="section__lead">We're not an SEO agency. We're an independent matching service — so we connect you with whoever genuinely fits your need, across the full range of SEO services.</p>
+      <div class="grid">
+        <div class="tile"><h3>Local SEO</h3><p>Get found in your area — maps, citations, the local pack.</p></div>
+        <div class="tile"><h3>National &amp; organic rankings</h3><p>National SEO and organic search visibility that's slipped or stalled.</p></div>
+        <div class="tile"><h3>E-commerce SEO</h3><p>Shopify, BigCommerce, Magento, WooCommerce — product &amp; category pages that sell.</p></div>
+        <div class="tile"><h3>International SEO</h3><p>Multi-region, multi-language search across new markets.</p></div>
+        <div class="tile"><h3>Backlinks &amp; authority</h3><p>Quality link building and backlink analysis to build trust with Google.</p></div>
+        <div class="tile"><h3>Technical SEO &amp; web</h3><p>Site health, speed, mobile-friendly builds, and website design.</p></div>
+        <div class="tile"><h3>Content &amp; SEO writing</h3><p>Content that ranks and actually reads well for your audience.</p></div>
+        <div class="tile"><h3>Reputation &amp; PPC</h3><p>Reputation management and paid search (PPC) when you need a faster lever.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- What you get -->
-  <section class="section" id="what-you-get">
-    <div class="container whatyouget">
-      <div class="whatyouget__copy">
-        <p class="section__eyebrow">The deliverable</p>
-        <h2 class="section__title">What your renewal review includes</h2>
-        <p class="section__lead">A single, focused report — not a sales pitch and not a contract.</p>
-        <ul class="checklist">
-          <li>Where your rankings have slipped and why</li>
-          <li>Content that's decayed and needs refreshing</li>
-          <li>Technical issues silently hurting your visibility</li>
-          <li>Where competitors are pulling ahead</li>
-          <li>A prioritized list of what to renew first</li>
-        </ul>
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored" class="btn btn--primary">Start your free renewal review</a>
-      </div>
-      <aside class="whatyouget__panel" aria-label="Positioning">
-        <p class="panel__quote">"Not an SEO agency. No retainers, no long-term contracts."</p>
-        <p class="panel__text">We exist to do one thing well: tell you, honestly, what needs renewing. What you do with the report is up to you.</p>
-      </aside>
-    </div>
-  </section>
-
-  <!-- Stats band -->
-  <section class="statband">
-    <div class="container statband__inner">
-      <div class="stat">
-        <span class="stat__num">3 days</span>
-        <span class="stat__label">Typical turnaround</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">0</span>
-        <span class="stat__label">Retainers or contracts</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">1 report</span>
-        <span class="stat__label">Clear, prioritized, yours to keep</span>
+  <!-- Why it's free -->
+  <section class="section" id="free">
+    <div class="container">
+      <div class="freebox">
+        <p class="section__eyebrow">Why it's free</p>
+        <h2 class="freebox__title">The service is completely free to you. We don't charge for matching — ever.</h2>
+        <p class="freebox__text">No fees, no subscriptions, no catch. You answer a few questions, we point you to a provider worth talking to, and what happens next is entirely up to you. Using SEO Renewal never costs you more than going to a provider directly.</p>
+        <div class="freebox__list">
+          <p><span class="chk" aria-hidden="true">✓</span> No cost to use the service</p>
+          <p><span class="chk" aria-hidden="true">✓</span> No obligation to sign with anyone</p>
+          <p><span class="chk" aria-hidden="true">✓</span> Your price won't go up vs. going direct</p>
+          <p><span class="chk" aria-hidden="true">✓</span> Independent — matched to fit, not to one vendor</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section section--alt" id="faq">
+  <section class="section" id="faq">
     <div class="container container--narrow">
-      <p class="section__eyebrow">Questions</p>
-      <h2 class="section__title">Frequently asked</h2>
-
-      <details class="faq">
-        <summary>Is the renewal review really free?</summary>
-        <p>Yes. The review and the report are free and come with no obligation. There's no retainer and no contract.</p>
-      </details>
-      <details class="faq">
-        <summary>Are you an SEO agency?</summary>
-        <p>No. We're a review service. We tell you what needs renewing and hand you the report — no ongoing commitment required.</p>
-      </details>
-      <details class="faq">
-        <summary>How long does the review take?</summary>
-        <p>Most renewal reviews are completed and returned within three business days of submitting your site.</p>
-      </details>
-      <details class="faq">
-        <summary>What do you need from me?</summary>
-        <p>Just your website address and an email to send the report to. That's it.</p>
-      </details>
+      <p class="section__eyebrow">Questions, answered</p>
+      <details class="faq"><summary>Is this really free?</summary><p>Yes. There's no cost to use SEO Renewal. You're never charged for being matched, and you're never obligated to hire the provider we suggest.</p></details>
+      <details class="faq"><summary>Will using SEO Renewal cost me more than going direct?</summary><p>No. The price you'd pay a provider is the same whether you find them through us or on your own. We simply help you find the right fit faster.</p></details>
+      <details class="faq"><summary>Are you an SEO company yourselves?</summary><p>No. We're an independent matching service. We don't sell SEO — we connect you with vetted specialists based on what you actually need.</p></details>
+      <details class="faq"><summary>Will I get spammed or sold to a dozen vendors?</summary><p>No. We match you thoughtfully and only share your details with the provider that fits. We don't sell your information.</p></details>
     </div>
   </section>
 
   <!-- Final CTA -->
   <section class="finalcta">
     <div class="container finalcta__inner">
-      <h2 class="finalcta__title">When was your SEO last reviewed?</h2>
-      <p class="finalcta__text">If you can't remember, it's time for a renewal. Find out what's slipping — free, in plain English.</p>
-      <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored" class="btn btn--primary btn--lg">Start your free renewal review</a>
+      <h2 class="finalcta__title">Before you renew, see what else is out there.</h2>
+      <p class="finalcta__text">It takes under a minute, it's free, and you're under no obligation.</p>
+      <button type="button" class="btn btn--gold btn--lg" data-open-wizard>Find my match</button>
     </div>
   </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" id="site-footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__brand">
-        <span class="brand brand--footer">
-          <span class="brand__text">SEO<span class="brand__accent">Renewal</span></span>
-        </span>
-        <p class="site-footer__tagline">Independent SEO review &amp; renewal. Not an agency. No retainers.</p>
-      </div>
-      <nav class="site-footer__links" aria-label="Footer">
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">How it works</a>
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">Why renew</a>
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">What you get</a>
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">FAQ</a>
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">Start review</a>
+  <footer class="footer" id="site-footer" role="contentinfo">
+    <div class="container">
+      <span class="brand brand--sm"><span class="brand__text">SEO<span class="brand__accent">Renewal</span></span></span>
+      <p class="footer__disclosure">SEO Renewal may receive compensation when you connect with a provider through our service. This never affects the price you pay. SEO Renewal is an independent matching service and is not an SEO provider.</p>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+        <a href="accessibility.html" data-keep-href="true">Accessibility</a>
       </nav>
-    </div>
-    <div class="container site-footer__disclosure">
-      <p>Affiliate disclosure: SEO Renewal is an independent referral service. When you request a renewal review, you may be connected with our SEO partner (Stan Ventures), and we may earn a commission if you become a customer — at no extra cost to you.</p>
-    </div>
-    <div class="container site-footer__legal">
-      <span>&copy; <span id="year"></span> SEO Renewal. All rights reserved.</span>
-      <span class="site-footer__legal-links">
-        <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">Privacy</a> · <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">Terms</a> · <a href="https://my.stanventures.com/r/4JH00?p=/managed-seo-services&utm_source=seo-renewal&utm_campaign=affiliate" rel="sponsored">Contact</a> · <a href="accessibility.html" data-keep-href="true">Accessibility Statement</a>
-      </span>
+      <p class="footer__copy">&copy; <span id="year"></span> SEO Renewal. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Wizard mounts here -->
+  <div id="wizardRoot"></div>
+
+  <script src="wizard.js"></script>
   <script src="a11y.js"></script>
 </body>
 </html>
